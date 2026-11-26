@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Message Age</title>
+<style>
+:root{font:14px/1.45 system-ui,sans-serif;color:#211935;background:#f8f6fe}
+body{width:286px;margin:0;padding:17px;box-sizing:border-box}
+h1{font-size:19px;margin:0 0 5px}
+p{margin:0 0 14px}
+#site{font-weight:650;color:#594581;overflow-wrap:anywhere}
+button,select,input{box-sizing:border-box;font:inherit;width:100%;border-radius:8px;padding:8px}
+button{margin-bottom:14px;background:#5439b4;border:1px solid #5439b4;color:white;font-weight:700;cursor:pointer}
+#version{font-size:11px;color:#594581;font-weight:500}
+#test{background:#fff;color:#5439b4}
+button:disabled{opacity:.6;cursor:default}
+select,input{margin-top:4px;background:white;border:1px solid #cbbfe6;color:inherit}
+#site-offset{margin-top:12px}
+#site-offset .tip{margin:4px 0 8px}
+#save-offset{margin-bottom:0}
+#status{margin:8px 0;color:#594581}
+#status:empty,#hover:empty{display:none}
+.tip{margin:12px 0 0;color:#504761;font-size:12px}
+</style>
+<script src="popup.js" defer></script>
+</head>
+<body>
+<h1>Message Age <small id="version"></small></h1>
+<p id="site">Checking current site…</p>
+<button id="toggle" type="button" disabled>Turn on hover timer</button>
+<button id="test" type="button" hidden disabled>Test timer</button>
+<label for="order">Numeric date format</label>
+<select id="order" disabled>
+<option value="DMY">Day / Month / Year</option>
+<option value="MDY">Month / Day / Year</option>
+</select>
+<form id="site-offset" hidden>
+<label for="offset">FunPay time offset (minutes)</label>
+<input id="offset" type="number" min="-1440" max="1440" step="1" value="0" required aria-describedby="offset-help">
+<p id="offset-help" class="tip">Enter 60 to add one hour to the site's timestamp, or -60 to subtract one hour. Use 0 to reset.</p>
+<button id="save-offset" type="submit">Save offset</button>
+</form>
+<p id="status" role="status"></p>
+<p id="hover" class="tip"></p>
+<p class="tip">Hover a message timestamp for the live timer. You can also right-click a selected timestamp and choose <strong>Show elapsed time</strong>.</p>
+</body>
+</html>
+
+
