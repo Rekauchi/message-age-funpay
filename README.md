@@ -2,7 +2,27 @@
 
 Message Age 1.3.0 shows how much time has passed since a FunPay message was sent. It runs only on HTTPS pages at funpay.com and www.funpay.com, calculates elapsed time locally, and saves preferences in browser storage.
 
-See the [illustrated usage guide](docs/usage.md) for screenshots of the timers and settings.
+## Use the timer
+
+The screenshots show the extension running in Brave on a sample conversation.
+
+### Live hover timer
+
+Hover over a FunPay message timestamp. The timer updates every second. Move away or press Escape to dismiss it.
+
+![Original message timestamp and live elapsed timer](docs/screenshots/hover-timer.png)
+
+### Right-click timer
+
+Select a timestamp, right-click, and choose **Show elapsed time**.
+
+![Elapsed timer next to a selected timestamp](docs/screenshots/selected-timestamp.png)
+
+### FunPay time offset
+
+Open the extension popup to toggle the hover timer, select a numeric date format, or set the **FunPay time offset**. Enter 60 to add an hour, -60 to subtract an hour, or 0 to reset, then click **Save offset**. An explicit time zone in a timestamp takes precedence.
+
+![Message Age popup confirming a saved 60-minute time offset](docs/screenshots/time-offset.png)
 
 ## Install locally
 
@@ -24,12 +44,6 @@ When updating, keep the same folder to retain your settings. Click **Reload** on
 3. Refresh any open FunPay tabs.
 
 Firefox removes temporary add-ons on restart. A permanent installation on standard Firefox requires a Mozilla-signed build. This manifest requires Firefox 140 or later.
-
-## Use the timer
-
-- Hover over a FunPay message timestamp. The timer updates every second. Move away or press Escape to dismiss it.
-- Select a timestamp, right-click, and choose **Show elapsed time**.
-- Open the extension popup to toggle the hover timer, select a numeric date format, or set the **FunPay time offset** in minutes. Enter 60 to add one hour to the displayed timestamp before the age is calculated, -60 to subtract one hour, or 0 to reset. An explicit time zone in a timestamp takes precedence.
 
 ## Source layout
 
