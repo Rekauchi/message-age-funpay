@@ -2,6 +2,8 @@
 
 Message Age 1.3.0 shows how much time has passed since a FunPay message was sent. It runs only on HTTPS pages at funpay.com and www.funpay.com, calculates elapsed time locally, and saves preferences in browser storage.
 
+See the [illustrated usage guide](docs/usage.md) for screenshots of the timers and settings.
+
 ## Install locally
 
 Clone or download this repository. If you downloaded a ZIP from GitHub, extract it first.
