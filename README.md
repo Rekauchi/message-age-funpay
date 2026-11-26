@@ -1,5 +1,7 @@
 # Message Age for FunPay
 
+**English** · [Русский](README.ru.md)
+
 Message Age 1.3.0 shows how much time has passed since a FunPay message was sent. It runs only on HTTPS pages at funpay.com and www.funpay.com, calculates elapsed time locally, and saves preferences in browser storage.
 
 ## Use the timer
